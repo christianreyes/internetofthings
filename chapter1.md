@@ -5,6 +5,12 @@ Chapter 1: Introduction
 
 I enjoy bridging the physical and digital world (like robotics) and I hope to convey the basic principles in doing that.
 
+Code will look different than the rest of the text ```"like this"```.
+
+Anywhere you see the following syntax ```// it's a code comment the text following it will be ignored by the program```
+
+You should be able to run the code in your node window to play with it. Just open the node program and copy and paste or type the examples.
+
 [Chapter 2: Data](chapter2.md)  
 
 [README](README.md)
