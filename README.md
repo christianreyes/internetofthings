@@ -10,5 +10,5 @@ JavaScript will be the programming language which will be used throughout these 
 Table of Contents:
 
 [Chapter 1: Introduction](chapter1.md)  
-[Chapter 2: Data](chapter2.md)
+[Chapter 2: Data](chapter2.md)  
 [Chapter 3: Storing Data](chapter3.md)
