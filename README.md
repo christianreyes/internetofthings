@@ -5,5 +5,5 @@ An introduction to the technologies and fundamentals involved in bridging the ph
 
 Table of Contents:
 
-[Chapter 1: Introduction](chapter1.md)
+[Chapter 1: Introduction](chapter1.md)  
 Chapter 2: Data
