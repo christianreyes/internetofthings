@@ -39,7 +39,7 @@ An object is a collection of keys and values. Objects are most commonly use to h
 
 In this example, ```"firstName"``` is the "key" and the value associated with that key is ```"Billy"```. Similarly, the key ```"interests"``` has a value of an array, ```["Fishing", "Space", "Legos"]```.
 
-[Chapter 3: Storing Data](chapter3.md)
+[Chapter 1: Introduction](chapter1.md)
 
 [README](README.md)
 
