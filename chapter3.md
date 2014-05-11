@@ -46,3 +46,7 @@ Variables can even use other variables
 ```javascript
 var evenMoreMagicNumber = magicNumber * 2 // * means muultiply
 ```
+
+Chapter 4 ....
+
+[Chapter 2: Data](chapter2.md)
