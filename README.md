@@ -22,4 +22,5 @@ Table of Contents:
  9  | Putting it all together         | Morse Code Chat      
  10 | Camera                          | SnapThat             
  11 | Robotics                        | Telepresence Bot     
- 12 | Image Processing                | Selfie Bot           
+ 12 | Image Processing                | Selfie Bot       
+ 13 | Going Mobile                    | Android Remote
