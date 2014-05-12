@@ -1,7 +1,7 @@
 The Internet of Things
 ===========
 
-An introduction to the technologies and fundamentals involved in bridging the physical and digital world, in an interactive way.
+An introduction to the technologies and fundamentals involved in bridging the physical and digital world, in an interactive way. The intended audience is people who have little to no experience programming.
 
 JavaScript will be the programming language which will be used throughout these examples. 
 
