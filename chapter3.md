@@ -88,6 +88,8 @@ The output would be:
 data: This is a line of text!   
 ```
 
+TODO: Explain about reading arguments from the command line
+
 Chapter 4 ....
 
 [Chapter 2: Data](chapter2.md)
