@@ -85,6 +85,7 @@ Variables can even use other variables
 
 ```javascript
 var evenMoreMagicNumber = magicNumber * 2 // * means muultiply
+```
 
 [Chapter 1: Introduction](chapter1.md)
 
