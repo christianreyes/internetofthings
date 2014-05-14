@@ -11,6 +11,14 @@ Anywhere you see the following syntax ```// it's a code comment the text followi
 
 You should be able to run the code in your node window to play with it. Just open the node program and copy and paste or type the examples.
 
+You can also put the code in a text file with a text editor (I recommend [Notepad++](http://notepad-plus-plus.org/download/v6.6.2.html) on Windows or [TextMate](https://api.textmate.org/downloads/release) on Mac)
+
+Save the file as ```program_name_here.js``` and run on the terminal with:
+
+```node program_name_here.js```
+
+To run your javascript progam.
+
 [Chapter 2: Data](chapter2.md)  
 
 [README](README.md)
