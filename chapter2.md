@@ -39,6 +39,60 @@ An object is a collection of keys and values. Objects are most commonly use to h
 
 In this example, ```"firstName"``` is the "key" and the value associated with that key is ```"Billy"```. Similarly, the key ```"interests"``` has a value of an array, ```["Fishing", "Space", "Legos"]```.
 
+#### Function
+
+A function is a block of code that usually performs a specific task. Functions are usually defined whenever a set of instructions will be ran multiple times so that the same code doesn't need to be copied and pasted. For instance, if you had a Robot object that had only had a ```turnLeft``` function, and you wanted it to turn right, you would tell it to turn left three times:
+
+```javascript
+turnLeft();  
+turnLeft();   // functions are invoked with parentheses 
+turnLeft();
+```
+
+However, writing ```turnLeft()``` three times everytime you want to make the robot turn right can be problematic after a while because you could make a mistake and maybe only write it two times instead of three, or if you change how you want it to turn right, you will need to update the turn right code everywhere. To help increase the readability and accuracy of the code, you can define a function called ```turnRight``` which will run the three ```turnLeft()``` commands:
+
+```javascript
+function turnRight(){
+  turnLeft();
+  turnLeft();
+  turnLeft();
+}
+```
+
+To run the function, you would just write:
+
+```javascript
+turnRight();
+```
+
+Functions are data types just like the other data types above and can be stored into variables or keys in an object just like the other data types.
+
+##### Function Parameters and Return Values
+
+Functions are also unique in that they can receive inputs and return an output, the inputs are called parameters and have names and can be used inside the function. Let's make a function for adding two numbers:
+
+```javascript
+var add = function(number1, number2){
+  return number1 + number2
+};
+```
+
+In the ```add``` function which we saved to a variable, we pass in two parameters, ```number1``` and ```number2```. We then take those two numbers, add them, and then return the result.
+
+Let's test our add function by passing it ```1``` and ```2```:
+
+```javascript
+add(1, 2)   // the result is 3
+```
+
+If we want to save the result to a variable, we would write: 
+
+```javascript
+var result = add(1,2)
+```
+
+Use functions in your programs to make the code more readable, but also to enable tasks to have variable inputs (i.e. the numbers are not hard-coded).
+
 ## Storing Data
 
 In JavaScript, storing data is done through the keyword ```var``` along with the name of the variable. For example: if we wanted to store the number ```123``` in a variable named "magicNumber" we would write:
