@@ -14,7 +14,7 @@ Table of Contents:
  1  | [Introduction](chapter1.md)           | Installing node.js   
  2  | [Data](chapter2.md)                   | Classifying Data     
  3  | [Input and Output (I/O)](chapter3.md) | Hello World!         
- 4  | File I/O                              | Dictionary           
+ 4  | [File I/O](chapter4.md)               | Dictionary           
  5  | Networks                              | [Network Chat](examples/network_chat)         
  6  | The World Wide Web                    | Portfolio            
  7  | Interactive Web                       | Snake Game           
