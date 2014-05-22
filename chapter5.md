@@ -26,26 +26,7 @@ Subnet Mask:     255.255.255.0
 Default Gateway: 192.168.1.1
 ```
 
-If the computer tries to send a message to another computer with an IP Address of ```54.128.64.3```, it will forward the message to its default gateway (1), if the default gateway is not in the same subnet as the destination, it will forward it to its default gateway (2), and so on (3) until it reaches a gateway that is on the same network as the device (4) and the packet is delivered to the device (5).
-
-An example of the following flow, assumming the following device configurations:
-
-```
-Computer
-
-IP Address:      192.168.1.5
-Subnet Mask:     255.255.255.0
-Default Gateway: 192.168.1.1
-
-Router 1
-
-IP Address:      192.168.1.1
-Subnet Mask:     255.255.0.0
-Default Gateway: 192.168.1.1
-
-```
-
-TODO: FINISH
+If the computer tries to send a message to another computer with an IP Address of ```54.128.64.3``` (a email server for example), it will forward the message to its default gateway (usually the home router) because the ip address is outside of its subnet. The packets would then be routed to the ISP (Internet Server Provider) who would then route the packets to the correct destination.
 
 #### Routing
 
