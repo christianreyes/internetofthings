@@ -5,6 +5,10 @@ Chapter 5: Networks
 
 Almost every device (computer, phone, server, etc) that you interact with communicates via the Internet Protocol. A device has an **IP Address** which allows other devices to send messages to it. Devices also have a **subnet mask** which tells the device what range IP Addresses are possible in its network.
 
+Devices communicate with one another over the Internet Protocol by sending a **packet** of data to an **ip address** and a **port**. Ports are numbers that differentiate traffic on a single device. Popular services or applications run on ports that are [well-known](http://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers).
+
+The model of a device sending data to another device using IP Addresses and Ports is referred to as the **client-server** model. The **server** is the device which is **listening** or is **bound** to its **IP Address** and **port**. The **Client** sends information to the other device's **IP Address** and **port**.
+
 Let's assume we have a computer with the following network configuration:
 
 ```
