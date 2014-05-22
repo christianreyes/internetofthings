@@ -40,6 +40,18 @@ Often referred to as a **connection-based prototol**, TCP relies on handshaking 
 
 However, as a consequence of ensuring that data is received in-order, real-time applications such as video calling or multiplayer video games can suffer significant network lagging if packets are not received, which causes the originating device to have to retransmit the packets until the receieving device ackowledges their receipt.
 
+Some examples of application ports with TCP:
+
+80: HTTP (Hypertext Transfer Protocol, used for receiving websites)
+22: SSH (Secure Shell Protocol, used for remote server usage)
+143: IMAP (Used for Email)
+443: HTTPS (Secure web communication)
+
 #### UDP (User Datagram Protocol)
 
 While TCP is a connection-based protool, UDP is a **message-oriented protocol**. Sending data via UDP is much more lightweight (there are no connection handshakes) and potentially faster because the protocol does not guarantee packet delivery. Packets are also not guarenteed to be received in order. Due to these characteristics, UDP is often the protocol chosen for real-time applications such as video calling or multiplayer video games. For applications which ordering or receipting is required that use UDP implement their own logic of packet ordering or retransmission.
+
+Some examples of application ports with UDP:
+
+53: DNS (Domain Name System, used for resolving IP addresses)
+123: NTP (Network Time Protocol)
