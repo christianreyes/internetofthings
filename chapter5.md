@@ -20,7 +20,7 @@ This configuration tells the computer that other devices on its network will hav
 
 Devices normally communicate via a switch, a networking device which the devices connect to and forwards messages to devices based on their IP Addresses.
 
-#### IP Routing
+### IP Routing
 
 If the computer tries to send data packets to a device with an IP Address that is outside of the range defined by the IP Address and Subnet Mask, the packet will go to the **default gateway** to be **routed** to the destination. The default gateway  (Your router at home is normally your network default gateway and a switch).
 
@@ -34,7 +34,7 @@ Default Gateway: 192.168.1.1
 
 If the computer tries to send a message to another computer with an IP Address of ```54.128.64.3``` (a email server for example), it will forward the message to its default gateway (usually the home router) because the ip address is outside of its subnet. The packets would then be routed to the ISP (Internet Server Provider) who would then route the packets to the correct destination.
 
-#### TCP (Transmission Control Protocol)
+### TCP (Transmission Control Protocol)
 
 Often referred to as a **connection-based prototol**, TCP relies on handshaking and verifying to deliver data as a reliable, ordered, and error-checked stream. These characteristics of TCP is the reason that the **World Wide Web** (http), email, and other services use this protocol to ensure data is received properly.
 
@@ -47,7 +47,7 @@ Some examples of application ports with TCP:
 * 143: IMAP (Used for Email)  
 * 443: HTTPS (Secure web communication)
 
-#### UDP (User Datagram Protocol)
+### UDP (User Datagram Protocol)
 
 While TCP is a connection-based protool, UDP is a **message-oriented protocol**. Sending data via UDP is much more lightweight (there are no connection handshakes) and potentially faster because the protocol does not guarantee packet delivery. Packets are also not guarenteed to be received in order. Due to these characteristics, UDP is often the protocol chosen for real-time applications such as video calling or multiplayer video games. For applications which ordering or receipting is required that use UDP implement their own logic of packet ordering or retransmission.
 
@@ -55,3 +55,7 @@ Some examples of application ports with UDP:
 
 * 53: DNS (Domain Name System, used for resolving IP addresses)  
 * 123: NTP (Network Time Protocol)
+
+#### DNS (Domain Name System)
+
+TODO: Explain how DNS translates www.example.com to the IP Address of the web server.
