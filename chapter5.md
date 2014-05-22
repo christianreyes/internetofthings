@@ -42,10 +42,10 @@ However, as a consequence of ensuring that data is received in-order, real-time 
 
 Some examples of application ports with TCP:
 
-80: HTTP (Hypertext Transfer Protocol, used for receiving websites)
-22: SSH (Secure Shell Protocol, used for remote server usage)
-143: IMAP (Used for Email)
-443: HTTPS (Secure web communication)
+* 80: HTTP (Hypertext Transfer Protocol, used for receiving websites)  
+* 22: SSH (Secure Shell Protocol, used for remote server usage)  
+* 143: IMAP (Used for Email)  
+* 443: HTTPS (Secure web communication)
 
 #### UDP (User Datagram Protocol)
 
@@ -53,5 +53,5 @@ While TCP is a connection-based protool, UDP is a **message-oriented protocol**.
 
 Some examples of application ports with UDP:
 
-53: DNS (Domain Name System, used for resolving IP addresses)
-123: NTP (Network Time Protocol)
+* 53: DNS (Domain Name System, used for resolving IP addresses)  
+* 123: NTP (Network Time Protocol)
