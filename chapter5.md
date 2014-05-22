@@ -16,6 +16,8 @@ This configuration tells the computer that other devices on its network will hav
 
 Devices normally communicate via a switch, a networking device which the devices connect to and forwards messages to devices based on their IP Addresses.
 
+#### Routing
+
 If the computer tries to send data packets to a device with an IP Address that is outside of the range defined by the IP Address and Subnet Mask, the packet will go to the **default gateway** to be **routed** to the destination. The default gateway  (Your router at home is normally your network default gateway and a switch).
 
 Updated example the computer network configuration:
@@ -27,8 +29,6 @@ Default Gateway: 192.168.1.1
 ```
 
 If the computer tries to send a message to another computer with an IP Address of ```54.128.64.3``` (a email server for example), it will forward the message to its default gateway (usually the home router) because the ip address is outside of its subnet. The packets would then be routed to the ISP (Internet Server Provider) who would then route the packets to the correct destination.
-
-#### Routing
 
 #### TCP 
 
