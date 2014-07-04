@@ -1,77 +1,95 @@
-Chapter 4: File I/O
-============
+Chapter 3: Input and Output (I/O)
+=============
 
-Programs often need to read files in to do some data-processing and outputing data in a file.
+Most programs consist of taking some input and using it to output something.
 
-Here are some examples of using the [```FileSystem```](http://nodejs.org/api/fs.html) module ```fs```.
+The input of a program is usually called ```stdin``` or Standard Input. Similarly, ```stdout```, Standard Output, is the output. There's also a ```stderr``` for errors, but we won't talk about that.
 
-Let's assume that we have a file called __languages.txt__ which contains the name of a different language on each line:
+#### Output
 
-```
-english
-spanish
-french
-chinese
-arabic
-german
-italian
-greek
-```
+For our first simple program, "Hello World", we will write to the ```stdout``` of our program. We can do this with the  [```console```](http://nodejs.org/api/stdio.html) object which is included by default in node.js programs.
 
-Let's write a small program which will read in __languages.txt__ and output the number of languages in the file.
+To write ```"Hello World!"``` to the stdout / console, we write: 
 
 ```javascript
-var fs = require('fs')
-
-var data = fs.readFileSync("languages.txt");
+console.log("Hello world!")
 ```
 
-```fs.readFileSync``` will return the binary data of the file in a [```Buffer```](http://nodejs.org/api/buffer.html) object, but we want to have the ```String``` representation of the file, not the binary representation, so we will call ```.toString()``` on the resulting ```buffer``` of binary data.
+The code above will result in the following output:
+
+```Hello World!```
+
+#### Input
+
+To read from the keyboard input on the console, we will read directly from the ```stdin``` [Stream](http://nodejs.org/api/stream.html) which is a property of the [```process```](http://nodejs.org/api/process.html) object which represents the current process which the node.js program is running in.
 
 ```javascript
-var dataString = data.toString();
+process.stdin.setEncoding('utf8');        // sets the stream to encode in standard text values
+
+process.stdin.on('readable', function() { // when the input stream becomes readable, run this function
+  var data = process.stdin.read()        // read the data that's in the input stream (the key strokes)
+  if (data !== null) {                   // there's a null when the program is first opened, so ignore null values
+    console.log('data: ' + data)         // print out the data that was read in
+  }
+})
 ```
 
-If we check what the contents of the string are in the file by writing ```console.log(dataString)``` we can see that the file contents is actually the string:
+Example: If we input: ```This is a line of text!``` 
+The output would be:
+
+```
+data: This is a line of text!   
+
+```
+
+Note above: There was intentionally a new line after the output, because the ```console.log``` function appends a newline character ```\n``` to the end of its input. In this case, the input was ```This is a line of text!\n``` due to the "enter" or "carriage" return key that we pressed to finish our input. So, ```console.log``` printed ```This is a line of text!\n``` and then appended ```\n``` which made an extra line appear. 
+
+We can get rid of this extra line by either: removing the newline from the input, or writing the input directly to the ```process.stdout``` stream instead of using ```console.log```. I'll show both examples below:
+
+##### Removing the newline from the input
 
 ```javascript
-'english\nspanish\nfrench\nchinese\narabic\ngerman\nitalian\ngreek\n'
+process.stdin.setEncoding('utf8');
+
+process.stdin.on('readable', function() {
+  var data = process.stdin.read();
+
+  if (data !== null) {
+    data = data.split("\n")[0]; // splitting the string on the newline, taking everything before the newline (index 0)
+    console.log('data: ' + data);
+  }
+});
 ```
 
-Each language is separated by the newline character ```\n``` (on windows it's actually ```\r\n```)
+Here I used the [```.split```](http://www.w3schools.com/jsref/jsref_split.asp) function on string. It separates a string based on the string inputted, which was a newline ```\n``` character in this case and returns an array of all the parts separated by the character. For our example, ```["This is a line of text!", ""]``` was returned and I knew that the first index would be everything before the newline, so I grabbed the value at the ```0``` index of the array, which was ```"This is a line of text!"```
 
-Let's split the string of the entire file into each line by using the ```.split``` function on a String.
+The output would be:
+```
+data: This is a line of text!   
+```
+
+##### Outputting only one newline
 
 ```javascript
-var lines = dataString.split("\n"); 
-````
+process.stdin.setEncoding('utf8');
 
-Which results in the array ```[ 'english', 'spanish', 'french', 'chinese', 'arabic', 'german', 'italian', 'greek', '' ]```. There's an empty string as the last element in the array because there was a newline at the end of the file. Let's remove the last element of the array. 
-
-```javascript
-lines.pop() // removes the last element in an array - http://www.w3schools.com/jsref/jsref_obj_array.asp
+process.stdin.on('readable', function() {
+  var data = process.stdin.read();
+  if (data !== null) {
+    process.stdout.write('data: ' + data);
+  }
+});
 ```
 
-Now that we have only the languages in the array ```[ 'english', 'spanish', 'french', 'chinese', 'arabic', 'german', 'italian', 'greek' ]```, we can output the length to the console.
+We know the input already has a newline at the end of it, so instead of using ```console.log``` we will write directly to ```process.stdout``` (which will output to the console).
 
-```javascript
-var numLanguages = lines.length;
-
-console.log("There are " + numLanguages + " lanugages in the file");
+The output would be:
+```
+data: This is a line of text!   
 ```
 
-Let's take it a step futher and output the number of languages in a file called ```numLanguages.txt```.
+TODO: Explain about reading arguments from the command line
 
-```javascript
-fs.writeFileSync("numLanguages.txt", numLanguages)
-```
+[Chapter 5: File I/O](chapter5.md)
 
-If we open up the file in a text editor, we see that the ```numLanguages.txt``` file contains:
-
-```
-8
-```
-
-Chapter 5: Networks
-
-[Chapter 3: Input and Output (I/O)](chapter3.md)
+[Chapter 3: Flow Control](chapter3.md)

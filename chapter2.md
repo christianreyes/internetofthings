@@ -141,7 +141,6 @@ Variables can even use other variables
 var evenMoreMagicNumber = magicNumber * 2 // * means muultiply
 ```
 
-[Chapter 3: Input and Output (I/O)](chapter3.md)
+[Chapter 3: Flow Control](chapter3.md)
 
 [Chapter 1: Introduction](chapter1.md)
-
